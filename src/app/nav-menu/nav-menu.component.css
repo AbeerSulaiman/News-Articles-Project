@@ -1,0 +1,15 @@
+.main-title {
+    font-family: 'Smooch';
+    font-weight: 600;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    color: #264653;
+  }
+  .nav-link {
+    color: #264653;
+  }
+  .nav-link:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+  }

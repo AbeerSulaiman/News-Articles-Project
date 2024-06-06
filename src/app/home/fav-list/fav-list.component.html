@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Favourite List</h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-4">Title</div>
+        <div class="col col-4">Author</div>
+        <div class="col col-4">Date</div>
+        <div class="col col-4">Action</div>
+      </li>
+      <li class="table-row" *ngFor="let item of favList; let i">
+        <div class="col col-4" >{{item.title}}</div>
+        <div class="col col-4" >{{item.author}}</div>
+        <div class="col col-4" >{{item.publishedAt}}</div>
+        <div class="col col-4" ><i (click)="removeFavItem(item.id)" class="fa fa-trash-o" aria-hidden="true"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="favList.length <= 0" class="empty-list">
+    <h6>Favourite List is Empty!</h6>
+  </div>
